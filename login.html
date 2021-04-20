@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .h1{color: aqua; font-family: cursive;}
+        </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form onsubmit="login()">
+        <label for="username">username</label>
+        <input type="text" name="username" id="username" placeholder="username" required autofocus>
+        <br/>
+        <label for="password">password</label>
+        <input type="text" name="password" id="password" placeholder="password" required autofocus>
+        <br/>
+        <label for="password">email</label>
+        <input type="email" name="email" id="email" placeholder="email" required autofocus>
+        <br/>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+        <button type="button" onclick="hello()">click me</button>
+    </form>
+    <script>
+        function login(){
+            event.preventDefault();
+            alert("login btn clicked");
+            let username=document.querySelector("#username").value;
+            alert("username:" + username);
+            if(username=="admin" && username.length>3){
+                alert("Login sucess");
+                window.location.href='file:///C:/Users/rame2674/eclipse-workspace/cabapp-ui/table.html';
+            }
+            else{
+                alert("Invalid login credentials");
+            }
+        }
+        function hello(){
+            alert("hello");
+        }
+    </script>
+</body>
+</html>
